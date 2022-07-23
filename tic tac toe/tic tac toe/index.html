@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body class="body" onload="load()"> 
+  <button type="button" style="display:none;" id="alertWord" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+  </button>
+
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content bg-dark" style="color:rgb(238, 164, 26);">
+        <div class="modal-header">
+          <h5 class="modal-title fs-2" id="staticBackdropLabel" style="color:rgb(238, 164, 26);"></h5>
+          <button type="button" class="btn-close" style="background-color:rgb(238, 164, 26);" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body fs-4" id="modalDisplay">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="d-flex align-items-center style1">
+    <section class="style5">
+      <div id="backgroudc" class="d-flex justify-content-center bg-dark align-items-center pt-4">
+        <form class="mb-4 mt-1 w-75" action="fisrtName">
+          <label class="form-label" for="First Name">Player One</label><br>
+          <input class="inp w-100" type="text" placeholder="Player One" id="pOne"><br>
+          <label class="form-label" for="Last Name">Player Two</label><br>
+          <input class="inp w-100" type="text" placeholder="Player Two" id="pTwo"><br>
+        </form>
+        <button class="btn w-75 fs-4" onclick="start()" id="btn">Start</button>
+      </div>
+      <div class="w-75 bg-dark style4 px-2 pt-2 mt-3">
+          <div class="d-flex fit">
+            <div style="color:rgb(238, 164, 26); text-align:center;">
+              <div id="oDisp">Player One</div>
+              <h1 id="oScore" style="text-align:center;">0</h1>
+            </div>
+            <div style="color:rgb(238, 164, 26); text-align:center;">
+              <div id="tDisp">Player Two</div>
+              <h1 id="tScore" style="text-align:center;">0</h1>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="mt-4 w-50">
+              <button class="btn fs-5 bt mx-4 w-75" onclick="trestart()" style="background-color:rgb(238, 164, 26);">Restart</button>
+            </div>
+            <div class="mt-4 w-50">
+              <button class="btn fs-5 bt mx-4 w-75" onclick="cancel()" style="background-color:rgb(238, 164, 26);">Cancel</button>
+            </div>
+          </div>
+          <div class="mt-3 mb-3">
+            <div class="fs-2" style="color:rgb(238, 164, 26); text-align:center;">Audio</div>
+            <div class="d-flex fit2 mt-4">
+              <div class="w-50">
+                <button class="btn fs-5 bt w-75 ms-2" onclick="tPlay()" style="background-color:rgb(238, 164, 26);">Play</button>
+              </div>
+              <div class="w-50">
+                <button class="btn fs-5 bt w-75 ms-4" onclick="tPause()" style="background-color:rgb(238, 164, 26);">Pause</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <div class="col-10 col-md-5 bg-dark style2 yt d-flex py-2 px-2">
+      <div class="d-flex div mt-2" style="margin-bottom:-5px;">
+        <div class="div2">
+          <button onclick="keys(event)" class="buttons" id="d1"></button>
+        </div>
+        <div class="div222 pe-3">
+          <button onclick="keys(event)" class="buttons" id="d2"></button>
+        </div>
+        <div class="div22 pe-3">
+          <button onclick="keys(event)" class="buttons" id="d3"></button>
+        </div>
+      </div>
+      <div class="d-flex div" style="margin-bottom:-5px;">
+        <div class="div2">
+          <button onclick="keys(event)" class="buttons mt-2" id="d4"></button>
+        </div>
+        <div class="div222 pe-3">
+          <button onclick="keys(event)" class="buttons mt-2" id="d5"></button>
+        </div> 
+        <div class="div22 pe-3">
+          <button onclick="keys(event)" class="buttons mt-2" id="d6"></button>
+        </div>
+      </div>
+      <div class="d-flex div1">
+        <div class="div2">
+          <button onclick="keys(event)" class="buttons mt-2" id="d7"></button>
+        </div>
+        <div class="div222 pe-3">
+          <button onclick="keys(event)" class="buttons mt-2" id="d8"></button>
+        </div>
+        <div class="div22 pe-3">
+          <button onclick="keys(event)" class="buttons mt-2" id="d9"></button>
+        </div>
+      </div>
+    </div>
+    <div class="w-25 bg-dark style44 px-3 pt-2">
+        <div class="d-flex fit1 ">
+          <div style="color:rgb(238, 164, 26); text-align:center;">
+            <div id="ocDisp">Player One</div>
+            <h1 id="ocScore" style="text-align:center;">0</h1>
+          </div>
+          <div style="color:rgb(238, 164, 26); text-align:center;">
+            <div id="tcDisp">Player Two</div>
+            <h1 id="tcScore" style="text-align:center;">0</h1>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="mt-4 w-50">
+            <button class="btn fs-5 bt me-3 w-75" onclick="trestart()" style="background-color:rgb(238, 164, 26);">Restart</button>
+          </div>
+          <div class="mt-4 w-50">
+            <button class="btn fs-5 bt ms-4 w-75" onclick="tcancel()" style="background-color:rgb(238, 164, 26);">Cancel</button>
+          </div>
+        </div>
+        <div class="mt-3 mb-3">
+          <div class="fs-2" style="color:rgb(238, 164, 26); text-align:center;">Audio</div>
+          <div class="d-flex fit22 mt-4 me-3">
+            <div class="w-50">
+              <button class="btn fs-5 bt w-75" onclick="tcPlay()" style="background-color:rgb(238, 164, 26);">Play</button>
+            </div>
+            <div class="w-50">
+              <button class="btn fs-5 ms-5 bt w-75" onclick="tcPause()" style="background-color:rgb(238, 164, 26);">Pause</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <script src="app.js"></script>
+  <script src="bootstrap.bundle.js"></script>
+</body>
+</html>
