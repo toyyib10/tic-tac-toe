@@ -1,22 +1,51 @@
+.body {
+  background-color: rgb(238, 164, 26); 
+}
 .style1{
   margin-top: 10px;
   flex-wrap: wrap;
   justify-content:space-around;
 }
 .style2{
-  height: 200px;
+  height: 350px;
+  font-size: 4em;
+  box-shadow: 2px 2px 5px;
+  flex-direction: column;
   border-radius: 10px;
-  justify-content: center; 
-  align-items:center; 
-  margin-bottom: 5px;
-  padding-left: 30px;
-  border: rgb(21, 209, 21);
+  font-family: 'Courier New', Courier, monospace;
+}
+.div{
+  justify-content: space-between;
+  height: 33.33%;
+  border-bottom: 5px solid rgb(238, 164, 26);
+}
+.div1{
+  justify-content: space-between;
+  height: 33.33%;
+}
+.div2{
+  width: 33%;
+  border-right: 5px solid rgb(238, 164, 26);
+}
+.div22{
+  width: 28%;
+}
+.div222{
+  width: 30%;
+  border-right: 5px solid rgb(238, 164, 26);
+}
+.buttons{
+  background-color:transparent; 
+  border:none; 
+  height: 95px;
+  width: 100%;
+  color:rgb(238, 164, 26);
 }
 #btn{
-  background-color: rgb(21, 209, 21);
+  background-color: rgb(238, 164, 26);
 }
 .tdb{
-  border-right: 1px solid rgb(21, 209, 21);
+  border-right: 1px solid rgb(238, 164, 26);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,12 +65,12 @@
   margin-top: 5px;
 }
 .form-label{
-  color: rgb(21, 209, 21);
+  color: rgb(238, 164, 26);
 }
 .inp {
   border-radius: 10px;
   border: none;
-  color: rgb(21, 209, 21);
+  color: rgb(238, 164, 26);
   padding: 10px 0;
   border-radius: 3px;
   padding-left: 6px;
@@ -50,6 +79,7 @@
 }
 .style44{
   display: block; 
+  height: 350px;
   margin-left: 10px;
   border-radius:15px; 
   box-shadow: 2px 2px 5px;
@@ -57,32 +87,8 @@
 .style4{
   display: none;
 }
-.td{
-  border-right: 1px solid rgb(21, 209, 21);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.tds{
-  border-right: 1px solid rgb(21, 209, 21); 
-  text-align: center; 
-}
-.tdsb{
-  border-right: 1px solid rgb(21, 209, 21); 
-  text-align: center; 
-}
-.tdwb{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .fit22{
   justify-content: space-between;
-}
-.tdw{
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 @media only screen and (max-width:768px){
   .style1{
@@ -94,12 +100,17 @@
   }
   .style2{
     margin-top: 20px; 
+    height: 300px;
+  }
+  .buttons{
+    height: 78px;
   }
   .style3{
     display: none;
   }
   .style4{
     display: block;
+    height: 350px;
     margin-left: 10px;
     border-radius:15px; 
     box-shadow: 2px 2px 5px;
